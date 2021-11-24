@@ -5,9 +5,12 @@ const FULL_TIME_HOURS = 12;
 const WAGE_PER_HOUR = 20;
 
 let emphours = 0;
-empcheck = Math.floor((Math.random() * 10) % 3);
-let empWage = WAGE_PER_HOUR * employeeHours(empcheck);
-    console.log("the employee wage is " + empWage);
+const NUMBER_OF_WOROKING_DAYS = 20;
+for(let i = 1; i <= NUMBER_OF_WOROKING_DAYS; i++){
+    empcheck = Math.floor((Math.random() * 10) % 3);
+    var empWage = WAGE_PER_HOUR * employeeHours(empcheck);
+}
+console.log("the employee wage is " + empWage);
     
 function employeeHours(){
     switch (empcheck) {
