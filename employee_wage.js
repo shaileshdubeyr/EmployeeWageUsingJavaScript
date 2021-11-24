@@ -3,16 +3,21 @@ const IS_FULLTIME = 2;
 const PART_TIME_HOURS = 8;
 const FULL_TIME_HOURS = 12;
 const WAGE_PER_HOUR = 20;
+const MAX_WORKING_HOURS_IN_MONTH = 100;
+const TOTAL_WORKING_DAYS = 10;
 
-let emphours = 0;
+let totalEmphours = 0;
+let totalWorkingdays = 0;
 var totalwage;
 const NUMBER_OF_WOROKING_DAYS = 20;
-for (let i = 1; i <= NUMBER_OF_WOROKING_DAYS; i++) {
+while(totalEmphours <= MAX_WORKING_HOURS_IN_MONTH && totalWorkingdays < TOTAL_WORKING_DAYS){
     empcheck = Math.floor((Math.random() * 10) % 3);
-    emphours += employeeWorkingHours(empcheck);
+    totalEmphours += employeeWorkingHours(empcheck);
+    totalWorkingdays++;
 }
-empWage = emphours * WAGE_PER_HOUR;
-console.log("the employee wage is " + empWage);
+empWage = totalEmphours * WAGE_PER_HOUR;
+console.log("Total working days " + totalWorkingdays + " total hours "
+             + totalEmphours + " employee wage " +empWage);
 
 function employeeWorkingHours() {
     switch (empcheck) {
