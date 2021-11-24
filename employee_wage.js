@@ -12,8 +12,10 @@ switch (empcheck) {
         break;
     case IS_FULLTIME:
         emphours = FULL_TIME_HOURS;
+        break;
     default:
         emphours = 0;
+        break;
 }
 
 let empWage = WAGE_PER_HOUR * emphours;
